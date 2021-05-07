@@ -1,0 +1,1 @@
+.header__loc : Voir pour text shadow seulement au top ==> FAIT

@@ -1,3 +1,78 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/police/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../public/police/shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
 
+.header {
+  text-align: center;
+}
+.header__logo {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header__loc {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(128, 128, 128, 0.123);
+  box-shadow: inset 0 10px 10px -11px rgba(128, 128, 128, 0.473);
+}
+.header__loc-map {
+  padding-right: 10px;
+}
+.header__link {
+  font-size: 23px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.footer {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+  color: white;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.footer li {
+  padding-bottom: 10px;
+}
+.footer__logo {
+  width: 100px;
+  padding-bottom: 10px;
+}
+.footer .svg-footer-1 {
+  font-size: 14px;
+  padding-right: 10px;
+}
+.footer .svg-footer-2 {
+  font-size: 12px;
+  padding-right: 7px;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li, ul {
+  list-style-type: none;
+}
 
 /*# sourceMappingURL=style.css.map */
