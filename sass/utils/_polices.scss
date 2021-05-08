@@ -8,6 +8,14 @@
 
 @font-face
 {
+	font-family: "Roboto-bold";
+	src: url("../../public/police/roboto/Roboto-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
 	font-family: "Shrikhand";
 	src: url("../../public/police/shrikhand/Shrikhand-Regular.ttf") format("truetype");
 	font-weight: normal;
@@ -16,4 +24,9 @@
 
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+	font-family: "Roboto-bold";
+	font-weight: 500;
 }

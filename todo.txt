@@ -1,1 +1,3 @@
 .header__loc : Voir pour text shadow seulement au top ==> FAIT
+
+section .explore : btn = lighten un linear-gradient ?
