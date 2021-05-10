@@ -1,3 +1,3 @@
 .header__loc : Voir pour text shadow seulement au top ==> FAIT
 
-section .explore : btn = lighten un linear-gradient ?
+section .explore : btn = lighten un linear-gradient ? ==> FAIT ==> Créer une fonction permettant d'enlight tous les buttons au survol

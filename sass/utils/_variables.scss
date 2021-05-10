@@ -1,4 +1,8 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$soft-background: rgba(128, 128, 128, 0.075);
 
+@mixin gradient-lighter {
+    background: linear-gradient(to bottom right, lighten($color-secondary, 4%), lighten($color-primary, 4%));
+}
