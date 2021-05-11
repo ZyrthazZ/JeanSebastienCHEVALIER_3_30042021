@@ -230,4 +230,94 @@ li, ul {
   display: none;
 }
 
+.rest__cover-img {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+.menu {
+  text-align: center;
+  width: 100vw;
+  border-radius: 50px 50px;
+  background-color: #f6f6f6;
+  margin-top: -75px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  position: relative;
+  /* ici la position relative permet passer la section par dessus l'image */
+}
+.menu__title {
+  text-align: initial;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  padding-left: 20px;
+}
+@media screen and (max-width: 375px) {
+  .menu__title {
+    font-size: 22px;
+  }
+}
+.menu__fav {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+  top: 35px;
+}
+@media screen and (max-width: 375px) {
+  .menu__fav {
+    font-size: 19px;
+    top: 30px;
+  }
+}
+.menu__sep__text {
+  width: 40px;
+  margin-left: 20px;
+  border-bottom: 3px solid #99E2D0;
+  font-weight: 100;
+}
+.menu .entrees, .menu .plats, .menu .desserts {
+  padding-bottom: 10px;
+}
+.menu__card {
+  text-align: initial;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  background-color: #fff;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.menu__card-text {
+  padding-left: 10px;
+}
+.menu__card-text h4 {
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: -10px;
+}
+.menu__card-price {
+  padding-top: 40px;
+  padding-right: 20px;
+}
+.menu .order {
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto";
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 3px 6px rgba(128, 128, 128, 0.473);
+  padding: 13px 40px 13px 40px;
+  border: hidden;
+  transition-duration: 0.2s;
+  font-size: 16px;
+}
+.menu .order:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 7px 6px rgba(128, 128, 128, 0.473);
+  background: linear-gradient(to bottom right, #ff8de0, #9e67e0);
+}
+
 /*# sourceMappingURL=style.css.map */
