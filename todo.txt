@@ -1,3 +1,9 @@
 .header__loc : Voir pour text shadow seulement au top ==> FAIT
 
 section .explore : btn = lighten un linear-gradient ? ==> FAIT ==> Créer une fonction permettant d'enlight tous les buttons au survol
+
+animations: faire valider loading spinner d'index
+            faire anim "arrivée" des menus
+            faire anim "fill heart"
+
+Voir pour soluce version Google Chrome
