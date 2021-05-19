@@ -1,3 +1,4 @@
+
 .menu {
     text-align: center;
     width: 100vw;
@@ -6,8 +7,11 @@
     margin-top: -75px;
     padding-top: 5px;
     padding-bottom: 50px;
-    position: relative; /* ici la position relative permet passer la section par dessus l'image */
+    position: relative; // ici la position relative permet passer la section par dessus l'image 
     &__title {
+        @include little-mobile {
+            font-size: 22px;
+        }
         @media screen and (max-width: 375px) {
             font-size: 22px;
         }
@@ -17,10 +21,6 @@
         padding-left: 20px;
     }
     &__fav {
-        font-size: 30px;
-        position: absolute;
-        right: 40px;
-        top: 35px;
         @media screen and (max-width: 375px) {
             font-size: 19px;
             top: 30px;
@@ -54,8 +54,9 @@
             }
         }
         &-price {
-            padding-top: 40px;
+            padding-top: 35px;
             padding-right: 20px;
+            
         }
     }
     & .order {

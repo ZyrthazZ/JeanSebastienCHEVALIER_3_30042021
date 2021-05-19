@@ -1,4 +1,7 @@
-$load-spinner-dur: 4000ms;
+// Animation du Load-Spinner sur la page index
+
+
+$load-spinner-dur: 3000ms;
 
 @keyframes load_page {
   from {
@@ -52,35 +55,152 @@ $load-spinner-dur: 4000ms;
     opacity: 0;
   }
   
-  /*.load__spinner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid $color-secondary;
-    border-right: 16px solid $color-primary;
-    border-bottom: 16px solid $color-secondary;
-    border-left: 16px solid $color-primary;
-    animation: spin $load-spinner-dur linear;
-    opacity: 0;
+  // Animation sur les pages restaurants de l'apparition progressive des menus
+  
+  $menu-appear-dur: 3000ms;
+  $menu-appear-dealy: 750ms;
+  
+  @keyframes menu-appear {
+      0% {
+          opacity: 0;
+      }
+      
+      100% {
+          opacity: 1;
+      }
   }
   
-  @keyframes spin {
+  .entrees {
+      animation: menu-appear $menu-appear-dur both;
+      opacity: 0;
+  }
+  
+  .plats {
+      animation: menu-appear $menu-appear-dur $menu-appear-dealy both;
+      opacity: 0;
+  }
+  
+  .desserts {
+      animation: menu-appear $menu-appear-dur $menu-appear-dealy*2 both;
+      opacity: 0;
+  }
+  
+  @keyframes icon-rotate {
     0% {
-    transform: rotate(0deg);
-    opacity: 1; 
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
   }
   
-    50% {
-      opacity: 0.8;
+  // Animation sur les "cartes" des menus de la validation
+  
+  .menu__card {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &-text {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex-grow: 1;
+        & h4, p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
     }
-    100% {
-    transform: rotate(360deg);
-    opacity: 0; 
+    @include tablet {
+        &:hover &-animation {
+            margin-right: 0px;
+        }
+        &:hover &-animation-icon {
+            animation: icon-rotate 500ms both;
+        }
+    }
+    @include desktop {
+        &:active &-animation {
+            margin-right: 0px;
+        }
+        &:active &-animation-icon {
+          animation: icon-rotate 500ms both;
+      }
+    }
+}
+
+
+.menu__card-animation {
+    background-color: $color-tertiary;
+    margin-right:-60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    &-icon {
+      color: white;
+      font-size: 20px;
+      transform: rotate(180deg);
+    }
+}
+
+// Animation de remplissage des coeurs 
+
+@keyframes heart-appear {
+  from {
+      opacity: 0;
   }
+  
+  to {
+      opacity: 1;
   }
-  */
+}
+
+.heart-hide {
+  background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  @include tablet {
+      &:active {
+          animation:  heart-appear 1500ms both;
+      }
+  }
+  @include desktop {
+      &:hover {
+          animation:  heart-appear 1500ms both;
+      }
+  }
+}
+
+.heart-show {
+  opacity: 1;
+}
+
+
+.heart-hide, .heart-show {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+  top: 35px;
+  @media screen and (max-width: 375px) {
+      font-size: 19px;
+      top: 30px;
+  }
+}
+
+.rest__card__fav {
+  & .heart-hide, .heart-show {
+      font-size: 20px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      @media screen and (max-width: 375px) {
+          font-size: 19px;
+          top: 30px;
+      }
+  }
+}

@@ -245,7 +245,6 @@ li, ul {
   padding-top: 5px;
   padding-bottom: 50px;
   position: relative;
-  /* ici la position relative permet passer la section par dessus l'image */
 }
 .menu__title {
   text-align: initial;
@@ -258,11 +257,10 @@ li, ul {
     font-size: 22px;
   }
 }
-.menu__fav {
-  font-size: 30px;
-  position: absolute;
-  right: 40px;
-  top: 35px;
+@media screen and (max-width: 375px) {
+  .menu__title {
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 375px) {
   .menu__fav {
@@ -299,7 +297,7 @@ li, ul {
   margin-bottom: -10px;
 }
 .menu__card-price {
-  padding-top: 40px;
+  padding-top: 35px;
   padding-right: 20px;
 }
 .menu .order {
@@ -362,41 +360,143 @@ li, ul {
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
-  animation: load__spinner-rescale 4000ms ease-in-out;
+  animation: load__spinner-rescale 3000ms ease-in-out;
   opacity: 0;
 }
 
-/*.load__spinner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid $color-secondary;
-  border-right: 16px solid $color-primary;
-  border-bottom: 16px solid $color-secondary;
-  border-left: 16px solid $color-primary;
-  animation: spin $load-spinner-dur linear;
-  opacity: 0;
-}
-
-@keyframes spin {
+@keyframes menu-appear {
   0% {
-  transform: rotate(0deg);
-  opacity: 1; 
-}
-
-  50% {
-    opacity: 0.8;
+    opacity: 0;
   }
   100% {
-  transform: rotate(360deg);
-  opacity: 0; 
+    opacity: 1;
+  }
 }
+.entrees {
+  animation: menu-appear 3000ms both;
+  opacity: 0;
 }
-*/
+
+.plats {
+  animation: menu-appear 3000ms 750ms both;
+  opacity: 0;
+}
+
+.desserts {
+  animation: menu-appear 3000ms 1500ms both;
+  opacity: 0;
+}
+
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.menu__card {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex-grow: 1;
+}
+.menu__card-text h4, .menu__card-text p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (max-width: 1099px) {
+  .menu__card:hover .menu__card-animation {
+    margin-right: 0px;
+  }
+  .menu__card:hover .menu__card-animation-icon {
+    animation: icon-rotate 500ms both;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .menu__card:active .menu__card-animation {
+    margin-right: 0px;
+  }
+  .menu__card:active .menu__card-animation-icon {
+    animation: icon-rotate 500ms both;
+  }
+}
+
+.menu__card-animation {
+  background-color: #99E2D0;
+  margin-right: -60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+}
+.menu__card-animation-icon {
+  color: white;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
+
+@keyframes heart-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.heart-hide {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+@media screen and (max-width: 1099px) {
+  .heart-hide:active {
+    animation: heart-appear 1500ms both;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .heart-hide:hover {
+    animation: heart-appear 1500ms both;
+  }
+}
+
+.heart-show {
+  opacity: 1;
+}
+
+.heart-hide, .heart-show {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+  top: 35px;
+}
+@media screen and (max-width: 375px) {
+  .heart-hide, .heart-show {
+    font-size: 19px;
+    top: 30px;
+  }
+}
+
+.rest__card__fav .heart-hide, .rest__card__fav .heart-show {
+  font-size: 20px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+@media screen and (max-width: 375px) {
+  .rest__card__fav .heart-hide, .rest__card__fav .heart-show {
+    font-size: 19px;
+    top: 30px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
