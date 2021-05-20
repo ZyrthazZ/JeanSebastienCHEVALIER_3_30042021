@@ -5,12 +5,14 @@
     <title>OhMyFood - Acceuil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="public/css/style.css"/>
+    <!--<link rel="stylesheet" href="public/css/prefixed/style.css"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
     <body>
-        <div class="load__spinner" id="load__spinner">
+        <div class="load__spinner" id="load__spinner"> 
             <img class="load__spinner-svg" src="fork-plate-knife-svgrepo-com.svg" alt=""/>
-        </div>
+        </div> 
 
         <div id="bloc_page-index">
         
@@ -30,7 +32,7 @@
             
             <section class="operation"> <!-- Début de la section operation. Contient des cartes (inactives) -->
                 <h2 class="operation__title">Fonctionnement</h2>
-                
+                <div class="operation__content">
                 <button class="operation__btn operation__btn__01">
                     <div class="operation__btn-num">1</div>
                     <div class="operation__btn-icon"><i class="fas fa-mobile-alt"></i></div>
@@ -48,7 +50,7 @@
                     <span class="operation__btn-icon"><i class="fas fa-store"></i></span>
                     <span class="operation__btn-text">Dégustez au restaurant</span>
                 </button>
-                
+                </div>
             </section> <!-- Fin de la section operation -->
             
             <section class="rest" id ="restaurants"> <!-- Début de la section restaurants. Contient des cartes pour les différents restaurants amenant vers les pages de ceux-ci -->
@@ -64,11 +66,12 @@
                         <h3 class="rest__card__text-name">La palette du goût</h3>
                         <p class="rest__card__text-loc">Ménilmontant</p>
                     
-                    </div>
+                    
                     <span class="rest__card__fav">
                         <i class="far fa-heart heart-show"></i>
                         <i class="fas fa-heart heart-hide"></i>
                     </span>
+                </div>
                     <div class="rest__card__new" data-active="true" aria-hidden="true">Nouveau</div>
                     </a>
                     

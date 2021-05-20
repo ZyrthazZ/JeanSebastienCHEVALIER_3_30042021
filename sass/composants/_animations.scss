@@ -53,7 +53,7 @@ $load-spinner-dur: 3000ms;
     margin: -76px 0 0 -76px;
     animation: load__spinner-rescale $load-spinner-dur ease-in-out;
     opacity: 0;
-  }
+  } 
   
   // Animation sur les pages restaurants de l'apparition progressive des menus
   
@@ -164,6 +164,16 @@ $load-spinner-dur: 3000ms;
   -moz-background-clip: text;
   color: transparent;
   opacity: 0;
+  @include little-mobile {
+    &:active {
+        animation:  heart-appear 1500ms both;
+    }
+  }
+  @include mobile {
+    &:active {
+        animation:  heart-appear 1500ms both;
+    }
+  }
   @include tablet {
       &:active {
           animation:  heart-appear 1500ms both;
@@ -190,7 +200,7 @@ $load-spinner-dur: 3000ms;
       font-size: 19px;
       top: 30px;
   }
-}
+} 
 
 .rest__card__fav {
   & .heart-hide, .heart-show {
@@ -198,9 +208,9 @@ $load-spinner-dur: 3000ms;
       position: absolute;
       right: 0px;
       top: 0px;
-      @media screen and (max-width: 375px) {
+      /*@media screen and (max-width: 375px) {
           font-size: 19px;
-          top: 30px;
-      }
+          top: 30p
+      } */
   }
-}
+} 

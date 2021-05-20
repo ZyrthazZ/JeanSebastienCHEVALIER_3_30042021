@@ -1,4 +1,4 @@
-$breakpoints: (little-mobile: 375px, mobile: 599px, tablet: 1099px, desktop: 1100px);
+$breakpoints: (little-mobile: 375px, mobile: 725px, tablet: 1099px, desktop: 1100px);
 
 
 
@@ -9,19 +9,27 @@ $breakpoints: (little-mobile: 375px, mobile: 599px, tablet: 1099px, desktop: 110
 }
 
 @mixin mobile {
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @media screen and (min-width: map-get($breakpoints, little-mobile)) and (max-width: map-get($breakpoints, mobile)) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (max-width: map-get($breakpoints, tablet)) {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and  (max-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @media screen and (min-width: map-get($breakpoints, tablet)) and  (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
+
+  
+  @media screen and (min-width: 200px) and (max-width: 640px) {
+    .bloc {
+      display:block;
+      clear:both;
+    }
+  }
