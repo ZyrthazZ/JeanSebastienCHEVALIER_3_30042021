@@ -98,6 +98,11 @@ li, ul {
   margin-top: -20px;
   padding-bottom: 40px;
 }
+@media screen and (min-width: 1099px) and (min-width: 1100px) {
+  .explore {
+    margin-bottom: 50px;
+  }
+}
 .explore__title {
   padding: 30px 60px 0 60px;
 }
@@ -122,6 +127,11 @@ li, ul {
   background: linear-gradient(to bottom right, #ff8de0, #9e67e0);
 }
 
+@media screen and (min-width: 1099px) and (min-width: 1100px) {
+  .operation {
+    margin-bottom: 50px;
+  }
+}
 .operation__content {
   display: flex;
   flex-direction: column;
@@ -322,7 +332,7 @@ li, ul {
 .rest__card__img-img {
   width: 100%;
   height: 80%;
-  max-height: 10em;
+  max-height: 150px;
   object-fit: cover;
 }
 .rest__card__text {
@@ -416,6 +426,11 @@ li, ul {
   margin: auto;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1099px) and (min-width: 1100px) {
+  .menu__card {
+    width: 30vw;
+  }
+}
 .menu__card-text {
   padding-left: 10px;
 }
@@ -440,10 +455,26 @@ li, ul {
   transition-duration: 0.2s;
   font-size: 16px;
 }
+@media screen and (min-width: 1099px) and (min-width: 1100px) {
+  .menu .order {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
 .menu .order:hover {
   transform: scale(1.01);
   box-shadow: 0px 7px 6px rgba(128, 128, 128, 0.473);
   background: linear-gradient(to bottom right, #ff8de0, #9e67e0);
+}
+@media screen and (min-width: 1099px) and (min-width: 1100px) {
+  .menu__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 
 @keyframes load_page {
@@ -538,19 +569,27 @@ li, ul {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@media screen and (min-width: 725px) and (max-width: 1099px) {
-  .menu__card:hover .menu__card-animation {
-    margin-right: 0px;
-  }
-  .menu__card:hover .menu__card-animation-icon {
-    animation: icon-rotate 500ms both;
-  }
-}
-@media screen and (min-width: 1099px) and (min-width: 1100px) {
+@media screen and (min-width: 375px) and (max-width: 725px) {
   .menu__card:active .menu__card-animation {
     margin-right: 0px;
   }
   .menu__card:active .menu__card-animation-icon {
+    animation: icon-rotate 500ms both;
+  }
+}
+@media screen and (min-width: 725px) and (max-width: 1099px) {
+  .menu__card:active .menu__card-animation {
+    margin-right: 0px;
+  }
+  .menu__card:active .menu__card-animation-icon {
+    animation: icon-rotate 500ms both;
+  }
+}
+@media screen and (min-width: 1099px) and (min-width: 1100px) {
+  .menu__card:hover .menu__card-animation {
+    margin-right: 0px;
+  }
+  .menu__card:hover .menu__card-animation-icon {
     animation: icon-rotate 500ms both;
   }
 }

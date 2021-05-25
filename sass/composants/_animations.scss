@@ -111,19 +111,27 @@ $load-spinner-dur: 3000ms;
             overflow: hidden;
         }
     }
-    @include tablet {
-        &:hover &-animation {
-            margin-right: 0px;
-        }
-        &:hover &-animation-icon {
-            animation: icon-rotate 500ms both;
-        }
-    }
-    @include desktop {
+    @include mobile {
         &:active &-animation {
             margin-right: 0px;
         }
         &:active &-animation-icon {
+            animation: icon-rotate 500ms both;
+        }
+    }
+    @include tablet {
+      &:active &-animation {
+          margin-right: 0px;
+      }
+      &:active &-animation-icon {
+          animation: icon-rotate 500ms both;
+      }
+  }
+    @include desktop {
+        &:hover &-animation {
+            margin-right: 0px;
+        }
+        &:hover &-animation-icon {
           animation: icon-rotate 500ms both;
       }
     }
@@ -144,7 +152,7 @@ $load-spinner-dur: 3000ms;
       transform: rotate(180deg);
     }
 }
-
+ 
 // Animation de remplissage des coeurs 
 
 @keyframes heart-appear {
