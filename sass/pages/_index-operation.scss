@@ -27,13 +27,13 @@
     }
     &__btn {
         @include tablet {
-            width: 30vw;
+            width: 25vw;
         }
         @include desktop {
-            width: 30vw;
+            width: 25vw;
         }
         display: flex;
-        width: 90vw;
+        width: 80vw;
         margin: auto;
         cursor: pointer;
         

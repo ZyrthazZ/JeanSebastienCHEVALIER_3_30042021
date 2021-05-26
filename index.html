@@ -17,7 +17,7 @@
         <div id="bloc_page-index">
         
             <header class="header"> <!-- Début du header. Contient le logo OhMyFood et la localisation (statique) -->
-                <img class="header__logo" src="../Maquettes/Maquettes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
+                <img class="header__logo" src="../Maquettes/Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
                 <div class="header__loc">
                     <span class="header__loc-map"> <i class="fas fa-map-marker-alt" id="map" ></i> </span>
                     <span class="header__loc-text"> Paris, Belleville </span>
@@ -27,29 +27,30 @@
             <section class="explore"> <!-- Début de la section explore. Contient le texte de la section ainsi qu'un bouton lien ancre vers la section restaurants -->
                 <h1 class="explore__title">Réservez le menu qui vous convient</h1>
                 <p class="explore__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#restaurants"><button class="explore__btn">Explorer nos restaurants</button></a>
+                <!-- <a href="#restaurants"><button class="explore__btn">Explorer nos restaurants</button></a> Version d'origine, beaucoup plus pratique -->
+                <button class="explore__btn">Explorer nos restaurants</button>  <!-- Version "acceptée" par le validateur HTML mais beaucoup moins pratique par ne permet pas d'utiliser le bouton et l'ancre vers l'id=restaurants-->
             </section> <!-- Fin de la section explore -->
             
             <section class="operation"> <!-- Début de la section operation. Contient des cartes (inactives) -->
                 <h2 class="operation__title">Fonctionnement</h2>
                 <div class="operation__content">
-                <button class="operation__btn operation__btn__01">
+                <div class="operation__btn operation__btn__01">
                     <div class="operation__btn-num">1</div>
                     <div class="operation__btn-icon"><i class="fas fa-mobile-alt"></i></div>
                     <div class="operation__btn-text">Choisissez un restaurant</div>
-                </button>
+                </div>
                 
-                <button class="operation__btn operation__btn__02">
+                <div class="operation__btn operation__btn__02">
                     <span class="operation__btn-num">2</span>
                     <span class="operation__btn-icon"><i class="fas fa-list"></i></span>
                     <span class="operation__btn-text">Composez votre menu</span>
-                </button>
+                </div>
                 
-                <button class="operation__btn operation__btn__03">
+                <div class="operation__btn operation__btn__03">
                     <span class="operation__btn-num">3</span>
                     <span class="operation__btn-icon"><i class="fas fa-store"></i></span>
                     <span class="operation__btn-text">Dégustez au restaurant</span>
-                </button>
+                </div>
                 </div>
             </section> <!-- Fin de la section operation -->
             
@@ -60,7 +61,7 @@
                     <a href="pages_restaurants/menu_la_palette_du_gout.html">
                         
                     <div class="rest__card__img">
-                        <img class="rest__card__img-img" src="Maquettes/Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du goût"/>
+                        <img class="rest__card__img-img" src="Maquettes/Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du goût"/>
                     </div>
                     <div class="rest__card__text">
                         <h3 class="rest__card__text-name">La palette du goût</h3>
@@ -80,7 +81,7 @@
                 <article class="rest__card rest__card__02">
                     <a href="pages_restaurants/menu_la_note_enchantee.html">
                     <div class="rest__card__img">
-                        <img class="rest__card__img-img" src="Maquettes/Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant la note enchantée"/>
+                        <img class="rest__card__img-img" src="Maquettes/Maquettes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant la note enchantée"/>
                     </div>
                     <div class="rest__card__text">
                         <h3 class="rest__card__text-name">La note enchantée</h3>
@@ -97,7 +98,7 @@
                 <article class="rest__card rest__card__03">
                     <a href="pages_restaurants/menu_a_la_francaise.html">
                     <div class="rest__card__img">
-                        <img class="rest__card__img-img" src="Maquettes/Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant à la française"/>
+                        <img class="rest__card__img-img" src="Maquettes/Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant à la française"/>
                     </div>
                     <div class="rest__card__text">
                         <h3 class="rest__card__text-name">À la française</h3>
@@ -114,7 +115,7 @@
                 <article class="rest__card rest__card__04">
                     <a href="pages_restaurants/menu_le_delice_des_sens.html">
                     <div class="rest__card__img">
-                        <img class="rest__card__img-img" src="Maquettes/Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant le délice des sens"/>
+                        <img class="rest__card__img-img" src="Maquettes/Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant le délice des sens"/>
                     </div>
                     <div class="rest__card__text">
                         <h3 class="rest__card__text-name">Le délice des sens</h3>
@@ -132,14 +133,17 @@
             
             <footer class="footer"> <!-- Début du footer. Contient le logo OhMyFood, des liens (inactifs) ainsi que le lien contact menant vers une adresse mail -->
                 <ul>
-                    <li> <img class="footer__logo" src="../Maquettes/Maquettes Ohmyfood/images/logo/ohmyfood@2x--white.svg" alt="logo ohmyfood"/> </li>
-                        <div class="footer__content">
-                            <li> <a href="#"> <i class="fas fa-utensils svg-footer-1"></i>Proposer un restaurant</a> </li>
-                            <li> <a href="#"> <i class="fas fa-hands-helping svg-footer-2"></i>Devenir partenaire</a> </li>
-                            <li> <a href="#"> Mentions légales </a> </li>
-                            <li> <a href="mailto:contact.ohmyfood@gmail.com"> Contact </a> </li>
-                        </div>
+                    <li> <img class="footer__logo" src="../Maquettes/Maquettes_Ohmyfood/images/logo/ohmyfood@2x--white.svg" alt="logo ohmyfood"/> </li>
                 </ul>
+                
+                <div class="footer__content">
+                    <ul>
+                        <li> <a href="#"> <i class="fas fa-utensils svg-footer-1"></i>Proposer un restaurant</a> </li>
+                        <li> <a href="#"> <i class="fas fa-hands-helping svg-footer-2"></i>Devenir partenaire</a> </li>
+                        <li> <a href="#"> Mentions légales </a> </li>
+                        <li> <a href="mailto:contact.ohmyfood@gmail.com"> Contact </a> </li>
+                    </ul>
+                </div>
             </footer> <!-- Fin du footer -->
             
         </div>
