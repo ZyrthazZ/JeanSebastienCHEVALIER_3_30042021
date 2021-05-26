@@ -11,6 +11,18 @@
     &__logo {
         width: 100px;
         padding-bottom: 10px;
+        @include tablet {
+            display: block;
+            margin: auto;
+            width: 150px;
+            padding-bottom: 50px;
+        }
+        @include desktop {
+            display: block;
+            margin: auto;
+            width: 150px;
+            padding-bottom: 50px;
+        }
     }
     .svg-footer-1 {
         font-size: 14px;
@@ -19,5 +31,19 @@
     .svg-footer-2 {
         font-size: 12px;
         padding-right: 7px;
+    }
+    &__content {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-right: 100px;
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-right: 100px;
+        }
     }
 }
