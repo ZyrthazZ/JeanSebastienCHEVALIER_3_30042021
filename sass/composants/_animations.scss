@@ -50,7 +50,7 @@ $load-spinner-dur: 3000ms;
     top: 50%;
     width: 120px;
     height: 120px;
-    margin: -76px 0 0 -76px;
+    margin: -76px 0 0 -50px;
     animation: load__spinner-rescale $load-spinner-dur ease-in-out;
     opacity: 0;
   } 
