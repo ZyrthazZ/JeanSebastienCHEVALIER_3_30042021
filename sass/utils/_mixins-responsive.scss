@@ -26,10 +26,3 @@ $breakpoints: (little-mobile: 375px, mobile: 725px, tablet: 1099px, desktop: 110
     }
 }
 
-  
-  @media screen and (min-width: 200px) and (max-width: 640px) {
-    .bloc {
-      display:block;
-      clear:both;
-    }
-  }

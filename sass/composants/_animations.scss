@@ -85,6 +85,9 @@ $load-spinner-dur: 3000ms;
       opacity: 0;
   }
   
+  
+  // Animation sur les "cartes" des menus de la validation
+  
   @keyframes icon-rotate {
     0% {
       transform: rotate(180deg);
@@ -95,7 +98,6 @@ $load-spinner-dur: 3000ms;
     }
   }
   
-  // Animation sur les "cartes" des menus de la validation
   
   .menu__card {
     overflow: hidden;
